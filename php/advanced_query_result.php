@@ -60,7 +60,7 @@
     </nav>
 	
  
- <!-- Page Content -->
+<!-- Page Content -->
  
  <div class = "container-fluid" style = "margin-top : 10%">
  <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
@@ -71,11 +71,12 @@
 			<div class = "col-lg-10">
 				<div class = "row justify-content-between">
 				
-				<!-- Show Chart button -->
 				<div class = "left">
+				
+					<!-- Show Charts button -->
 					<button type='button' class='btn btn-primary'>Show charts</button>
 				
-					<!-- Sorting categories -->
+					<!-- Sorting Category -->
 					<select class="btn btn-primary dropdown-toggle" id="dropdownMenuButton" onchange = "sortingFunction(this)">
 							<option style= "display : none;" selected>Sort by:</option>
 							<option value = "Project number">Default</option>
@@ -86,7 +87,7 @@
 							<option value= "Founder">Founder</option>
 					</select>
 					
-					<!-- Sorting order -->
+					<!-- SOring order -->
 					<button type='button' class='btn btn-primary' id = "inc/dec" onclick = "sort_order()">Increasing</button>
 					
 				</div>
@@ -96,7 +97,7 @@
 					<h2 id = "number_result" style = "color : white"></h2>
 				</div>
 				
-				<!-- Switch view button -->
+				<!-- witch view button -->
 				<div class = "right">
 						<button type='button' class='btn btn-primary' onclick = "add_field()">Switch view</button>
 				</div>
@@ -134,6 +135,8 @@
 						<div class = "row">
 						
 							<div class = "col-lg-5">
+							
+							<!-- N# UML models -->
 								<div class = "row ">
 									<div class = "col-lg-12 field">
 										<span  class = "field-title align-text-center">UML models: </span>
@@ -141,7 +144,7 @@
 									</div>
 								</div>
 								
-							
+								<!-- Founder -->
 								<div class = "row">
 									<div class = "col-lg-12 field">
 										<span  class = "field-title align-text-center">Founder:</span>
@@ -149,6 +152,7 @@
 									</div>
 								</div>
 								
+								<!-- N# xmi -->
 								<div class = "row">
 									<div class = "col-lg-12 field">
 										<span  class = "field-title align-text-center">N# of xmi representation:</span>
@@ -164,18 +168,21 @@
 							
 						
 							<div class = "col-lg-5">
+							
+							<!-- Quality -->
 								<div class = "row">
 									<div class = "col-lg-12 field">
 										<h6 class = "field-title  align-text-center">Overall quality: </h6>
 									</div>
 								</div>
 						
+								<!-- Project type -->
 								<div class = "row">
 									<div class = "col-lg-12 field" >
 										<h6 class = "field-title  align-text-center">Project type: </h6>
 									</div>
 								</div>
-							</div>	<!--./col-lg-5 -->
+							</div>	<!--./col-sm-2 -->
 					
 					
 						</div>	<!--./Details row -->
@@ -217,17 +224,20 @@
 						
 						<div class = "row" style = "margin-top : 3%">
 							<div class = "col-lg-12 field">
+							<!-- N# of commits -->
 								<span class = "field-title">N# of commits : </span>
 								<span style = "color: black" id = "number_commits" name = "number_commits"> </span>
 							</div>
 						</div>
 						
+						<!-- N# of docs -->
 						<div class = "row" style = "margin-top : 3%">
 							<div class =  "col-lg-12 field">
 								<p class = "field-title ">N# of docs: </p>
 							</div>
 						</div>
 						
+						<!-- User tags -->
 						<div class = "row" style = "margin-top : 3%">
 							<div class = "col-lg-12 field">
 								<p class = "field-title ">User tags: </p>
@@ -259,13 +269,12 @@
 	<!-- Diagram List template -->
 	<!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
-	
 	<template id = "diagram_list_template">
 				
 		<div class = "col-lg-4" style = "margin-bottom : 2%; padding : 2%"  id = "template_number">
 			<div class = "row justify-content-center">	
-		
-				<!-- Image display and link -->
+			
+				<!--Link and image -->
 				<a target = "_blank" id = "ahref" name  = "ahref">
 					<iframe id = "xml_display" name = "xml_display"></iframe>
 					<object id = "dia_image" name = "dia_image" style = " background-size : cover; height : 250px; max-width : 100%">
@@ -273,7 +282,7 @@
 					</object>
 				</a>
 			</div>
-		
+			
 			<!-- Diagram name -->
 			<div class = "row justify-content-center" style = "margin-top : 1%">
 				<span class = "field" name = "dia_name" style = "overflow-wrap : break-word; width :100%; text-align : center" id = "dia_name">Title</span>
@@ -300,6 +309,7 @@
 				<div class = "row">
 					
 					<div class = "col-lg-4">
+					<!--Link and image -->
 						<a target = "_blank" id = "ahref" name = "ahref">
 							<iframe id = "xml_display" name = "xml_display"></iframe>
 							 <object id = "dia_image" name = "dia_image" style = "max-width : 100%; max-height : 100%">
@@ -335,7 +345,8 @@
 							<div class = "col-lg-5 field">
 								<span  class = "align-text-center field-title">Diagram type: </span>
 							</div>
-						
+							
+							<!-- Exyension -->
 							<div class = "col-lg-5 field" >
 								<span class = "align-text-center field-title" style = "color: black">Extension: </span>
 								<span  class = "align-text-center" style = "color: black" id = "dia_type" name = "dia_type"></span>
@@ -474,7 +485,6 @@
 		<div class = "col-lg-10">
 				<div id = "more_project_list">	</div> 
 	</div>
-			
 
 <?php
 $servername = "localhost";
