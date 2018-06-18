@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Software repository</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/agency.css" rel="stylesheet">
+	
+	 <!-- Custom page for this page and the about page -->
+	<link href="css/about.css" rel="stylesheet">
+
+  </head>
+
+  <body >
+  
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="index.html">Software Repository</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="query.html">Query</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="upload.html">Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="login/login.html">Login/Register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+ 
+ <!-- Page Content -->
+ 
+	<!-- Container that contains all the page content (no footer/header), to cut it in 2 parts-->
+	<div class="container-fluid" style = "margin-left : 10%;">
+	
+	<!-- Title -->
+	<div class="col-md-12">
+		<div class="row middle-text">		
+			<h2>Search for models, documents, data on this page:</h2>
+		</div>
+		<div class = "row">
+				<h4 style = "color : white">Fill the general search input along with categories.</h4>
+			</div>
+	</div>
+	
+	</div>
+	
+	<hr style="width: 100%; color: white; height: 1px; background-color : white;" />
+				
+	<div class="container-fluid" style = "margin-left : 10%;">
+	
+	<!-- One row for all the content, then divided into two columns -->
+	<div class="row">
+	<div class='col-lg-8'>
+		
+		<!-- First field -->
+	
+		<h4 style="margin-top: 5%; color:#FFFFFF;">General search :</h4>
+	
+		<div class="row">
+			<div class="col-lg-10">
+				<div class="input-group">
+			
+					<!-- Input field -->
+					<input type="text" class="form-control" name="user_input_field" placeholder="Search for..." required>
+					
+					<!-- Category -->
+					<div class="col-sm-auto">
+						<select class="btn btn-primary dropdown-toggle current_text" id="dropdownMenuButton">
+							<option value="All">All</option>
+							<option value="User tag" disabled>User tag</option>
+							<option value="Author name">Author name</option>
+							<option value="File name">Diagram name</option>
+							<option value="Project name">Project name</option>
+						</select>
+						
+					</div>
+
+					
+					<!-- Button to add more fields -->
+					<div class="col-sm-auto">
+						<button type='button' class='btn btn-primary' onclick='add_field("zoneField","field")'>+</button>
+					</div>
+					
+				</div><!-- /input-group -->
+			</div><!-- /.col-lg-10 -->
+		</div>	
+		
+		<!-- More fields zone -->
+			<div class="row">
+				<div class="col-lg-10"> 
+					<div id="zoneField" style="margin-top : 2%"> </div>
+				</div>
+			</div>
+			
+			<!-- Search Button -->
+		<div class="row" style = "margin-top : 5%">
+			<div class = "column-sm-auto">
+				<button id = "search_button" type='button' class='btn btn-primary' onclick = "start_query()">Search</button>
+			</div>
+		</div>
+		
+		
+	</div>	<!--./col-lg-8	/	Left column-->
+		
+	
+		<!-- Right column / Used for text advice -->
+	<div class='col-md-3'>
+		
+		<div class="row" style = "margin-top : 3%; color : white; border-left : solid 2px white; padding-left : 1%">
+			<div class='col-lg-12'>
+				<h5>Search advice:</h5>
+			</div>
+		</div>
+		<div class ="row"  style = "margin-top : 4%; color : white; border-left : solid 2px white; padding-left : 1%">
+			<div class='col-lg-12'>
+				<h5>You can select the category by clicking the dropdown menu.</h5>
+			</div>
+		</div>
+		<div class ="row"  style = "margin-top : 4%; color : white; border-left : solid 2px white; padding-left : 1%">
+			<div class='col-lg-12'>
+				<h5>If you want more crietria, go to advanced search.</h5>
+			</div>
+		</div>
+			
+			<div class="row" style = "margin-top : 4%; margin-bottom : 15%">
+				<div class="col-sm-auto">
+					<button type='button' class='btn btn-primary' onclick = "location.href='advanced.html'">Advanced search</button>
+				</div>
+			</div>
+		
+	</div>	<!-- ./col-lg-3 column on the right -->
+
+	</div>	<!-- ./general row -->
+	
+	
+	</div> <!-- ./container -->
+
+	
+ <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 bottom">
+            <span class="copyright">Copyright &copy; Your Website 2018</span>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-twitter"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-inline quicklinks">
+              <li class="list-inline-item">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">Terms of Use</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+	
+	<!-- Javascript functions for this page -->
+	<script language="javascript" type="text/javascript" src="js/query_page.js"></script>	 
+
+	 <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/agency.min.js"></script>
+	
+</body>
+</html>
