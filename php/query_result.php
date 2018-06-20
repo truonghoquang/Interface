@@ -698,7 +698,7 @@ $display = "'project'";
 		$temp .= "'";
 		$encoded_result = $temp;
 		
-		//print_r($encoded_result);
+		print_r($encoded_result);
 		
 		echo ("<script type = 'text/javascript'>
 		var JSON_result = $encoded_result;
